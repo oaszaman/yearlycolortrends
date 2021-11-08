@@ -2,6 +2,7 @@
 
 require_relative "../lib/colors/version"
 require_relative "./colors/cli.rb"
+require 'pry'
 
 module Colors
   class Error < StandardError; end
