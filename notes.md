@@ -10,3 +10,17 @@ the users to see the colors for the NYFW and LFW colors that was chosen.
 culture 
 4. Color code it so it stands out.
 5. For the NYFW & LFW add the paragraph on why those colors were chosen
+
+Layout 
+1. User is greeted and told exactly what the program does
+2. Asks user for input regarding years or if they want all years
+3. User puts their choice and then it asks if its for the yearly
+colors or NYFW and/or LFW
+4. User chooses
+5. User gets back the info regarding it. 
+
+Classes
+1. Colors
+2. CLI 
+3. Scraper
+4. 
