@@ -2,7 +2,14 @@
 
 require_relative "../lib/colors/version"
 require_relative "./colors/cli.rb"
+require_relative "./colors/scraper"
+require_relative "./colors/years"
+require_relative "./colors/pantonecolors"
+
+
 require 'pry'
+require 'nokogiri'
+require 'open-uri'
 
 module Colors
   class Error < StandardError; end
