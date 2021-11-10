@@ -4,6 +4,7 @@ class Colors::CLI
     @@white="\e[0m"
     @@blu="\e[1;34m"
     @@grn="\e[1;32m"
+    @@muted="\e[1;31m"
 
     def opening
         puts "\n#{@@blu}             Welcome to Pantones Yearly Color Trends!#{@@white}\n"
@@ -23,13 +24,12 @@ class Colors::CLI
         @months.each.with_index(1) { |index, month|
             puts "     #{@@mag}#{month}#{@@white}. #{index}"
     }
+        puts "#{@@muted}↓#{@@white}"
     end
 
     def gets_users_year
         collection_of_years = gets.strip.to_i
         show_colors_for(collection_of_years) if valid_input(collection_of_years, @months)
-        
-
     end
 
     def valid_input(input, data)

@@ -10,6 +10,9 @@ require_relative "./colors/pantonecolors"
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'colorize'
+require 'colorized_string'
+
 
 module Colors
   class Error < StandardError; end

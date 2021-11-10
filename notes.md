@@ -48,3 +48,5 @@ p.number
 div.namenumber
 
 13 spaces
+
+- I dont want it to get straight into the prompt so after the welcome, create something so the user can read it one at a time
