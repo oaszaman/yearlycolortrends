@@ -1,0 +1,3 @@
+class Colors::Scraper
+
+end

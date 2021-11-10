@@ -1,9 +1,11 @@
 
 class Colors::CLI
+    @@mag="\e[1;35m"
 
     def opening
-        puts "Welcome to Pantones Yearly Color Trends!"
-        
+        puts "\n#{@@mag}Welcome to Pantones Yearly Color Trends!\n"
     end
+
+    
 
 end
