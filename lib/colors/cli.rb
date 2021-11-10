@@ -18,7 +18,7 @@ class Colors::CLI
 
     def gets_user_years
         @months.each.with_index(1) { |index, month|
-            puts "#{@@blu}#{month}#{@@white}. #{index}"
+            puts "     #{@@blu}#{month}#{@@white}. #{index}"
     }
     end
 
