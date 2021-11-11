@@ -16,12 +16,13 @@ class Colors::CLI
 
     def get_years
         # have to scrape these
-        puts "\nChoose the #{@@mag}NUMBER#{@@white} that corresponds with the year you would like to select.\n"
-        @months = ["2021", "2020", "2019"]
+        # @years = ["2021", "2020", "2019"]
+        @years = Colors::Years.all
     end
 
     def show_years
-        @months.each.with_index(1) { |index, month|
+        puts "\nChoose the #{@@mag}NUMBER#{@@white} that corresponds with the year you would like to select.\n"
+        @years.each.with_index(1) { |index, month|
             puts "     #{@@mag}#{month}#{@@white}. #{index}"
     }
         puts "#{@@muted}↓#{@@white}"
@@ -29,7 +30,7 @@ class Colors::CLI
 
     def gets_users_year
         collection_of_years = gets.strip.to_i
-        show_colors_for(collection_of_years) if valid_input(collection_of_years, @months)
+        show_colors_for(collection_of_years) if valid_input(collection_of_years, @years)
     end
 
     def valid_input(input, data)
@@ -38,8 +39,8 @@ class Colors::CLI
     end
 
     def show_colors_for(collection_of_years)
-        month = @months[collection_of_years - 1]
-        puts "\n#{@@blu}             Here are the colors selected by Pantone for #{month}.#{@@white}\n"
+        year = @years[collection_of_years - 1]
+        puts "\n#{@@blu}             Here are the colors selected by Pantone for #{year}.#{@@white}\n"
     end
 
     def ending_statement
