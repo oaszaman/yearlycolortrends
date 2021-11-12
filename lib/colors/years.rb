@@ -9,6 +9,7 @@ class Colors::Years
     end
 
     def self.all
+        Colors::Scraper.scrape_years if @@all.empty?
         @@all 
     end
 
