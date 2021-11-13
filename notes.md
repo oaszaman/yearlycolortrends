@@ -1,3 +1,26 @@
+New Idea
+
+Just show the trend reposts for color of the year and NYFW and LFW
+
+First prompt will ask what category and then second will go straight into the answers
+which i will somwhow scrape
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------OLD STUFF------------------------------
+
 What is it gonna do?
 
 Collect past year pantone colors and allow the user to choose

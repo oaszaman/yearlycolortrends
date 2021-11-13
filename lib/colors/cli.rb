@@ -43,6 +43,8 @@ class Colors::CLI
         puts "\n#{@@blu}Here are the colors selected by Pantone for #{category}.#{@@white}\n"
     end
 
+    
+
 
 
     def ending_statement
