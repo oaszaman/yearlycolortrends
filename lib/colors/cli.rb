@@ -8,29 +8,29 @@ class Colors::CLI
 
     def opening
         puts "\n#{@@blu}             Welcome to Pantones Yearly Color Trends!#{@@white}\n"
-            get_years
-            show_years
-            gets_users_year
+            get_category
+            show_category
+            gets_users_category
             
     end
 
-    def get_years
+    def get_category
         # have to scrape these
-         @years = ["Color of the Year 2021", "London Fashion Week Spring/Summer 2022", "New York Fashion Week Spring/Summer 2022", "London Fashion Week Autumn/Winter 2021/2022", "New York Fashion Week Autumn/Winter 2021/2022"]
+         @category = ["Color of the Year 2021", "London Fashion Week Spring/Summer 2022", "New York Fashion Week Spring/Summer 2022", "London Fashion Week Autumn/Winter 2021/2022", "New York Fashion Week Autumn/Winter 2021/2022"]
         #@years = Colors::Years.all
     end
 
-    def show_years
-        puts "\nChoose the #{@@mag}NUMBER#{@@white} that corresponds with the year you would like to select.\n"
-        @years.each.with_index(1) { |index, month|
-            puts "\n     #{@@mag}#{month}#{@@white}. #{index}\n"
+    def show_category
+        puts "\nChoose the #{@@mag}NUMBER#{@@white} that corresponds with the category you would like to select.\n"
+        @category.each.with_index(1) { |index, cat|
+            puts "\n     #{@@mag}#{cat}#{@@white}. #{index}\n"
     }
         puts "#{@@muted}↓#{@@white}"
     end
 
-    def gets_users_year
-        collection_of_years = gets.strip.to_i
-        show_colors_for(collection_of_years) if valid_input(collection_of_years, @years)
+    def gets_users_category
+        collection_of_categories = gets.strip.to_i
+        show_colors_for(collection_of_categories) if valid_input(collection_of_categories, @category)
     end
 
     def valid_input(input, data)
@@ -38,10 +38,12 @@ class Colors::CLI
         
     end
 
-    def show_colors_for(collection_of_years)
-        year = @years[collection_of_years - 1]
-        puts "\n#{@@blu}Here are the colors selected by Pantone for #{year}.#{@@white}\n"
+    def show_colors_for(collection_of_categories)
+        category = @category[collection_of_categories - 1]
+        puts "\n#{@@blu}Here are the colors selected by Pantone for #{category}.#{@@white}\n"
     end
+
+
 
     def ending_statement
         puts "Hope you enjoyed!"
