@@ -16,14 +16,14 @@ class Colors::CLI
 
     def get_years
         # have to scrape these
-         @years = ["2021", "2020", "2019"]
+         @years = ["Color of the Year 2021", "London Fashion Week Spring/Summer 2022", "New York Fashion Week Spring/Summer 2022", "London Fashion Week Autumn/Winter 2021/2022", "New York Fashion Week Autumn/Winter 2021/2022"]
         #@years = Colors::Years.all
     end
 
     def show_years
         puts "\nChoose the #{@@mag}NUMBER#{@@white} that corresponds with the year you would like to select.\n"
         @years.each.with_index(1) { |index, month|
-            puts "     #{@@mag}#{month}#{@@white}. #{index}"
+            puts "\n     #{@@mag}#{month}#{@@white}. #{index}\n"
     }
         puts "#{@@muted}↓#{@@white}"
     end
@@ -40,7 +40,7 @@ class Colors::CLI
 
     def show_colors_for(collection_of_years)
         year = @years[collection_of_years - 1]
-        puts "\n#{@@blu}             Here are the colors selected by Pantone for #{year}.#{@@white}\n"
+        puts "\n#{@@blu}Here are the colors selected by Pantone for #{year}.#{@@white}\n"
     end
 
     def ending_statement
