@@ -1,15 +1,16 @@
 class Colors::Years
 
     @@all = []
-    attr_accessor :holder
+    attr_accessor :name
+    attr_reader :url
 
-    def initialize(holder)
-        @holder = holder 
+    def initialize(name)
+        @name = name
         save 
     end
 
     def self.all
-        Colors::Scraper.scrape_years if @@all.empty?
+        Colors::Scraper.scrape_colors if @@all.empty?
         @@all 
     end
 

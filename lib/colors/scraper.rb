@@ -3,7 +3,19 @@ require 'watir'
 
 class Colors::Scraper
 
-    def self.scrape_years
+    @@browser = Watir::Browser.new(:chrome, headless: true)
+
+
+    def self.scrape_colors
+
+        @@browser.goto 'https://www.pantone.com/hk/en/color-of-the-year-2021'
+        colors = @@browser.divs(class: 'data-content-type')
+
+        colors.each do |c|
+            name = c.text 
+            Colors::Years.new(name)
+        end
+
         #doc = Nokogiri::HTML(URI.open("https://www.pantone.com/hk/en/color-of-the-year-2021"))
         #years = doc.css("select#edit-date-filter-month option")
         #binding.pry
@@ -21,11 +33,11 @@ class Colors::Scraper
         #news = Nokogiri::HTML(js_doc.inner_html)
         #desired_results = doc.css(".year")
         
-
-        
-        
-        
-        
     end
+
+    #def self.scrape_colors(color)
+       # @@browser.goto color.url
+
+    #end
 
 end

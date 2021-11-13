@@ -11,6 +11,7 @@ class Colors::CLI
             get_category
             show_category
             gets_users_category
+           
             
     end
 
@@ -39,11 +40,14 @@ class Colors::CLI
     end
 
     def show_colors_for(collection_of_categories)
+        #put class from scraper
         category = @category[collection_of_categories - 1]
         puts "\n#{@@blu}Here are the colors selected by Pantone for #{category}.#{@@white}\n"
+        @category = Colors::Years.all
+        puts @category
     end
 
-    
+
 
 
 
