@@ -12,6 +12,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'colorize'
 require 'colorized_string'
+require 'watir'
 
 
 module Colors

@@ -34,8 +34,8 @@ Gem::Specification.new do |spec|
   # spec.add_dependency "example-gem", "~> 1.0"
   spec.add_development_dependency "pry"
   spec.add_dependency "nokogiri"
-
   spec.add_dependency 'colorize', '~> 0.8.1'
+  spec.add_dependency "watir"
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html

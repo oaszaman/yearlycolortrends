@@ -16,8 +16,8 @@ class Colors::CLI
 
     def get_years
         # have to scrape these
-        # @years = ["2021", "2020", "2019"]
-        @years = Colors::Years.all
+         @years = ["2021", "2020", "2019"]
+        #@years = Colors::Years.all
     end
 
     def show_years
