@@ -2,7 +2,7 @@ class Colors::Years
 
     @@all = []
     attr_accessor :name
-    attr_reader :url
+   
 
     def initialize(name)
         @name = name

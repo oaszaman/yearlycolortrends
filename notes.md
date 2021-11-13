@@ -7,6 +7,16 @@ which i will somwhow scrape
 
 OLD WAY!!!!
 
+ @@browser = Watir::Browser.new(:chrome, headless: true)
+
+@@browser.goto 'https://www.pantone.com/hk/en/color-of-the-year-2021'
+        colors = @@browser.divs(class: 'data-content-type')
+
+        colors.each do |c|
+            name = c.text 
+            Colors::Years.new(name)
+        end
+
 def self.scrape_years
         #doc = Nokogiri::HTML(URI.open("https://www.pantone.com/hk/en/color-of-the-year-2021"))
         #years = doc.css("select#edit-date-filter-month option")

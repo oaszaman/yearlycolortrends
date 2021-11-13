@@ -12,7 +12,6 @@ class Colors::CLI
             show_category
             gets_users_category
            
-            
     end
 
     def get_category
@@ -46,8 +45,6 @@ class Colors::CLI
         @category = Colors::Years.all
         puts @category
     end
-
-
 
 
 
